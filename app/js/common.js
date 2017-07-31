@@ -14,10 +14,12 @@ $(function() {
 	$('.nav-mobile-menu').click(function() {
 		$(this).toggleClass('is-open')
 		if ($('.nav-mobile-menu').hasClass('is-open')) {
-        	$('.main-menu').slideDown('slow')
+					$('.main-menu').slideDown('slow')
+					$('.nav-mobile-menu').css('transform', 'translate(0px, 200px)')
         }
     else { 
-    	$('.main-menu').slideUp('slow');
+			$('.main-menu').slideUp('slow');
+			$('.nav-mobile-menu').css('transform', 'translate(0px, 0px)')
   	} 
 	});
 

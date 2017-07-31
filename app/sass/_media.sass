@@ -17,14 +17,18 @@
 	.header .main-menu ul li a
 		font-size: 20px
 	.main-menu
-		display: none
+		display: flex
+		justify-content: center
+		align-items: center
 		position: absolute
-		top: 0
+		top: -1000px
 		left: 0
 		right: 0
 		bottom: 0
 		height: 100vh
-		background: white
+		background-color: white
+		z-index: 98
+		+tr(.3s ease-in-out)
 		ul
 			flex-direction: column
 			justify-content: center

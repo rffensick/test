@@ -32,6 +32,9 @@ body
 .text-right
 	text-align: right
 
+a:focus
+	text-decoration: none
+
 .wrapper
 	max-width: 785px
 	width: 100%
@@ -103,6 +106,28 @@ section#form
 		h2
 			font-size: 30px
 			font-family: roboto-light, sans-serif
+		.main-form
+			.group
+				text-align: center
+				position: relative
+				margin-bottom: 25px
+				input
+					width: 520px
+					border: 1px solid #E6E6E6
+					height: 60px
+					border-radius: 5px
+					font-size: 24px
+					color: #c8c8c8
+					font-weight: normal
+					margin: 
+					+placeholder-color(#c8c8c8)
+					text-align: center
+					&:hover, &:focus
+						outline: none
+				&:nth-child(2)
+					input[type="text"]
+						width: 320px
+					
 
 // header
 // 	position: absolute

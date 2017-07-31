@@ -1,13 +1,15 @@
 include sections/header
+include sections/form
 include settings/settings
 
 <!DOCTYPE html>
 html(lang="ru")
 	head
-		+settings()
+		+settings
 	body
 		main.content
-			+header()
+			+header
+			+form
 
 
 		link(rel="stylesheet" href="css/main.min.css")

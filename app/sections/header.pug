@@ -1,0 +1,16 @@
+mixin header()
+	-var active = 'Личная информация'; 
+	-var menu = { 'Личная информация': '/home', 'Опыт': '/exp', 'Javascript': '/java', 'О себе': '/about' };
+	header.header
+		.wrapper
+			.nav-mobile-menu
+				span
+			.main-menu
+				nav
+					ul
+						each val, key in menu
+							li
+								if active === key
+									a.active(href=val, title=key)= key
+								else
+									a(href=val, title=key)= key

@@ -1,0 +1,102 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "bourbon"
+@import "reset"
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+.fl-l
+	float: left
+.fl-r
+	float: right
+
+.text-center
+	text-align: center
+.text-left
+	text-align: left
+.text-right
+	text-align: right
+
+.wrapper
+	max-width: 785px
+	width: 100%
+	padding: 0 15px
+	margin: 0 auto
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.main
+	min-height: 100%
+
+.hidetab
+	position: absolute
+	left: 0
+	top: 0
+	height: 0
+	width: 0
+	overflow: 0
+	z-index: -1
+	opacity: 0
+.tab-cont
+	opacity: 1
+	+tr(opacity 1.4s)
+	&.hidetab
+		opacity: 0
+
+
+// Header-menu
+.header
+	padding: 40px 0
+	border-bottom: 1px solid #DADADA
+	.main-menu
+		ul
+			margin: 0
+			padding: 0
+			list-style-type: none
+			display: flex
+			justify-content: space-around
+			li
+				a
+					font-size: 14px
+					+tr(border .25s ease)
+					border-bottom: 1px solid $tr
+					&:hover
+						text-decoration: none
+						border-bottom: 1px solid #000
+					&.active
+						color: #1c1c1c
+.nav-mobile-menu
+	display: none
+
+
+// header
+// 	position: absolute
+// 	left: 0
+// 	top: 0
+// 	right: 0
+
+// footer
+// 	position: absolute
+// 	left: 0
+// 	bottom: 0
+// 	right: 0
+
+@import "media" // Всегда в конце

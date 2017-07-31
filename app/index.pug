@@ -1,0 +1,15 @@
+include sections/header
+include settings/settings
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		+settings()
+	body
+		main.content
+			+header()
+
+
+		link(rel="stylesheet" href="css/main.min.css")
+		script(src="js/scripts.min.js")
+	

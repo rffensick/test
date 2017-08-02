@@ -75,16 +75,16 @@ h2
 
 // Header-menu
 .header
+	position: fixed
 	padding: 40px 0
 	border-bottom: 1px solid #DADADA
 	background-color: white
 	z-index: 99
+	top: 0
+	left: 0
+	right: 0
 	+tr(.25s ease)
 	&.fixed
-		position: fixed
-		top: 0
-		left: 0
-		right: 0
 		padding: 20px 0
 		+tr(.25s ease)
 	.main-menu
@@ -110,6 +110,7 @@ h2
 
 // FORM
 section#form
+	padding-top: 100px
 	.wrapper
 		display: flex
 		justify-content: center
@@ -252,6 +253,9 @@ section#jslevel
 			li
 				font-size: 13px
 				position: relative
+				&:nth-child(4)
+					&:before
+						right: 0
 				&:before
 					content: ''
 					position: absolute
@@ -260,7 +264,6 @@ section#jslevel
 					bottom: -33px
 					z-index: 6
 					background-color: #fff
-					left: 0
 					background:
 						image: url("../img/dot.png")
 						repeat: repeat-y

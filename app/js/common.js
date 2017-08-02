@@ -41,11 +41,10 @@ $(window).scroll(function() {
 	if (wScroll > $("section#form").offset().top) {
 
 		$(".header").addClass('fixed animated fadeInDown');
-		$('section#form').css('margin-top', '100px')
 
 	} else {
 		$(".header").removeClass('fixed animated fadeInDown');
-		$('section#form').css('margin-top', '0px')
 	};
+
 
 });

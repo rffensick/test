@@ -44,7 +44,7 @@
 		position: relative
 		z-index: 99
 		+size(50px)
-		+tr(0.75s ease-in-out)
+		+tr(0.3s ease-in-out)
 		span,
 		span:before,
 		span:after
@@ -73,8 +73,35 @@
 				top: -3px
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-	/**/
+@media only screen and (max-width : 635px)
+	section#exp 
+		.group
+			flex: 1 0 auto
+			&-item:nth-child(3)
+				flex: 1 0 auto
+				display: flex
+				justify-content: center
+@media only screen and (max-width : 550px)
+	section#form .wrapper .main-form .group input
+		width: auto
+		font-size: 18px
+		padding: 0 20px
+	section#form .wrapper .main-form .group:nth-child(2) input[type=text]
+		width: auto
+
+
+@media only screen and (max-width : 461px)
+	section#exp 
+		.group
+			flex: 1 0 auto
+			flex-direction: column
+			&-item:nth-child(3)
+				flex: 1 1 auto
+				justify-content: flex-start
+
+@media only screen and (max-width : 420px)
+	h2
+		font-size: 25px
 
 
 /* Custom, iPhone Retina */

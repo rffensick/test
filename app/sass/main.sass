@@ -35,6 +35,11 @@ body
 a:focus
 	text-decoration: none
 
+h2
+	font-size: 30px
+	font-family: roboto-light, sans-serif
+
+
 .wrapper
 	max-width: 785px
 	width: 100%
@@ -97,6 +102,7 @@ section#form
 		justify-content: center
 		flex-direction: column
 		align-items: center
+		flex-wrap: wrap
 		h1
 			margin-top: 130px
 			font-size: 70px
@@ -127,7 +133,148 @@ section#form
 				&:nth-child(2)
 					input[type="text"]
 						width: 320px
-					
+
+// EXP section
+section#exp
+	margin-top: 70px
+	.wrapper
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		flex-wrap: wrap
+	.group
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		width: 100%
+		&-item
+			ul
+				list-style-type: none
+				margin: 0
+				padding: 0
+				li
+					margin: 20px
+					label
+						font-size: 16px
+						font-family: roboto-light, sans-serif
+	
+[type="checkbox"]
+  &:not(:checked), &:checked
+    position: absolute
+    left: -9999px
+  &:not(:checked) + label, &:checked + label
+    position: relative
+    padding-left: 1.95em
+    cursor: pointer
+  &:not(:checked) + label:before, &:checked + label:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 1.25em
+    height: 1.25em
+    border: 1px solid #345896
+    background: #fff
+    border-radius: 4px
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1)
+  &:not(:checked) + label:after, &:checked + label:after
+    content: '✔'
+    position: absolute
+    top: 0
+    left: 2px
+    font-size: 1.3em
+    line-height: 0.8
+    color: #09ad7e
+    transition: all .2s
+  &:not(:checked) + label:after
+    opacity: 0
+    transform: scale(0)
+  &:checked + label:after
+    opacity: 1
+    transform: scale(1)
+  &:disabled
+    &:not(:checked) + label:before
+      box-shadow: none
+      border-color: #bbb
+      background-color: #ddd
+    &:checked + label
+      &:before
+        box-shadow: none
+        border-color: #bbb
+        background-color: #ddd
+      &:after
+        color: #999
+    + label
+      color: #aaa
+  &:checked:focus + label:before, &:not(:checked):focus + label:before
+    border: 2px dotted blue
+
+
+label:hover:before
+  border: 2px solid #4778d9 !important
+
+
+// JS LEVEL
+section#jslevel
+	margin-top: 130px
+	.wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+	#slider
+		margin-top: 20px
+		width: 100%
+		position: relative
+		z-index: 5
+	.top-silder
+		width: 100%
+		ul
+			display: flex
+			list-style-type: none
+			padding: 0
+			margin: 0
+			justify-content: space-between
+			align-items: flex-end
+			li
+				font-size: 13px
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					width: 3px
+					height: 33px
+					bottom: -33px
+					z-index: 6
+					background-color: #fff
+					left: 0
+					background:
+						image: url("../img/dot.png")
+						repeat: repeat-y
+						position: 0.5px 0
+
+.ui-slider-horizontal .ui-slider-range-min
+	background: #8F89C8
+	position: relative
+.ui-slider-horizontal .ui-state-default
+	border: 0
+	height: 26px
+	position: absolute
+	top: 15px
+	width: 23px
+	background: white url("../img/arrow.png") no-repeat
+	&:focus, &:active
+		outline: none
+.ui-widget.ui-widget-content
+	// height: 50px
+	position: relative
+.ui-slider
+	position: relative
+.ui-corner-all
+	position: relative
+
+		
+
 
 // header
 // 	position: absolute

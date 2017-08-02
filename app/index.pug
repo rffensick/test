@@ -1,5 +1,8 @@
 include sections/header
 include sections/form
+include sections/exp
+include sections/jslevel
+include sections/aboutme
 include settings/settings
 
 <!DOCTYPE html>
@@ -10,8 +13,11 @@ html(lang="ru")
 		main.content
 			+header
 			+form
-
+			+exp
+			+jslevel
+			+aboutme
 
 		link(rel="stylesheet" href="css/main.min.css")
 		script(src="js/scripts.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js")
 	

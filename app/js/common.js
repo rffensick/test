@@ -21,4 +21,14 @@ $(function() {
   	} 
 	});
 
+	$( "#slider" ).slider({
+
+		min: 1,
+		max: 100,
+		value: 46,
+		range: "min",
+		animate: true
+
+	});
+
 });

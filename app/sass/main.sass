@@ -20,6 +20,9 @@ body
 	overflow-x: hidden
 	opacity: 1
 
+section
+	position: relative
+
 .fl-l
 	float: left
 .fl-r
@@ -74,6 +77,16 @@ h2
 .header
 	padding: 40px 0
 	border-bottom: 1px solid #DADADA
+	background-color: white
+	z-index: 99
+	+tr(.25s ease)
+	&.fixed
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		padding: 20px 0
+		+tr(.25s ease)
 	.main-menu
 		ul
 			margin: 0
@@ -269,8 +282,11 @@ section#aboutme
 			font-size: 16px
 			font-family: roboto-light, sans-serif
 		.aboutme
+			display: flex
+			width: 100%
+			justify-content: center
 			textarea
-				width: 515px
+				flex-basis: 515px
 				height: 180px
 				border: 1px solid #E8E8E8
 				padding: 10px 10px

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Eduard</title>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta property="og:image" content="path/to/image.jpg"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"/>
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png"/>
+    <meta name="theme-color" content="#000"/>
+    <meta name="msapplication-navbutton-color" content="#000"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000"/>
+  </head>
+  <body>
+    <main class="content">
+      <header class="header">
+        <div class="wrapper">
+          <div class="nav-mobile-menu"><span></span></div>
+          <div class="main-menu">
+            <nav>
+              <ul>
+                <li><a title="Личная информация" onclick="$('body').animatescroll();">Личная информация</a>
+                </li>
+                <li><a title="Опыт" onclick="$('section#exp').animatescroll();">Опыт</a>
+                </li>
+                <li><a title="Javascript" onclick="$('section#jslevel').animatescroll();">Javascript</a>
+                </li>
+                <li><a title="О себе" onclick="$('section#aboutme').animatescroll();">О себе</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <section id="form">
+        <div class="wrapper">
+          <h1 class="fadeInDown">Анкета</h1>
+          <div class="icon"><img src="img/icon.png" alt=""/></div>
+          <h2>Личная информация</h2>
+          <form class="main-form" method="post">
+            <div class="group">
+              <input type="text" required="required" value="Эдуард Иляскин Игоревич"/>
+            </div>
+            <div class="group">
+              <input type="text" value="1998-08-05"/>
+            </div>
+            <div class="group">
+              <input type="text" required="required" value="Караганда"/>
+            </div>
+            <div class="group">
+              <input type="text" required="required" value="ilyaskin6"/>
+            </div>
+            <div class="group">
+              <input type="text" required="required" value="ilyaskin1998@gmail.com"/>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section id="exp">
+        <div class="wrapper">
+          <div class="icon"><img src="img/exp-icon.png" alt=""/></div>
+          <h2>Расскажите о своем опыте</h2>
+          <div class="group">
+            <div class="group-item">
+              <ul>
+                <li>
+                  <input type="checkbox" checked="checked"/>
+                  <label>БЭМ/OOCSS(по надобности)</label>
+                </li>
+                <li>
+                  <input type="checkbox" checked="checked"/>
+                  <label>Stylus/LESS/SASS</label>
+                </li>
+                <li>
+                  <input type="checkbox" checked="checked"/>
+                  <label>Работаю с SVG</label>
+                </li>
+              </ul>
+            </div>
+            <div class="group-item">
+              <ul>
+                <li>
+                  <input type="checkbox" checked="checked"/>
+                  <label>Верстаю семантично</label>
+                </li>
+                <li>
+                  <input type="checkbox"/>
+                  <label>ES2015/ES2016</label>
+                </li>
+                <li>
+                  <input type="checkbox" checked="checked"/>
+                  <label>Gulp/GRUNT</label>
+                </li>
+              </ul>
+            </div>
+            <div class="group-item">
+              <ul>
+                <li>
+                  <input type="checkbox"/>
+                  <label>Webpack</label>
+                </li>
+                <li>
+                  <input type="checkbox" checked="checked"/>
+                  <label>jQuery</label>
+                </li>
+                <li>
+                  <input type="checkbox" checked="checked"/>
+                  <label>Ипользую Git</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="jslevel">
+        <div class="wrapper">
+          <div class="icon"><img src="img/js-icon.png" alt="js-icon"/></div>
+          <h2>Уровень владения JavaScript</h2>
+          <div class="top-silder">
+            <ul>
+              <li>Не владею</li>
+              <li>Использую готовые<br/>решения</li>
+              <li>Использую готовые решения <br/>и умею и переделывать</li>
+              <li>Пишу сложный JS с нуля</li>
+            </ul>
+          </div>
+          <div id="slider"></div>
+        </div>
+      </section>
+      <section id="aboutme">
+        <div class="wrapper">
+          <div class="icon"><img src="img/icon-about.png" alt=""/></div>
+          <h2>Расскажите о себе</h2>
+          <p>Напишите несколько предложений, чем привлекла наша вакансия <br/> и что вы ожидаете от работы у нас.</p>
+          <form class="aboutme">
+            <textarea>У меня очень большие перспективы стать хорошим fron-end'ером. Активно учу Jquary и JS. Буду очень рад с вами работать! Развиваюсь с каждым днем. Спасибо!</textarea>
+          </form>
+          <div class="btn-about"><a class="btn" href="#callback">Готово</a></div>
+        </div>
+      </section>
+    </main>
+    <link rel="stylesheet" href="css/main.min.css"/>
+    <script src="js/scripts.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  </body>
+</html>

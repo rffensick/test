@@ -1,4 +1,11 @@
 mixin aboutme()
   section#aboutme
     .wrapper
-      h1 Hello
+      .icon
+        img(src="img/icon-about.png", alt="")
+      h2 Расскажите о себе
+      p Напишите несколько предложений, чем привлекла наша вакансия <br/> и что вы ожидаете от работы у нас.
+      form.aboutme
+        textarea 
+      .btn-about
+        a(href="#callback").btn Готово

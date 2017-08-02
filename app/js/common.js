@@ -31,6 +31,13 @@ $(function() {
 
 	});
 
+	$('.header .main-menu ul li a').click(function() {
+
+		$('.main-menu').css('top', '-1000px')
+		$('.nav-mobile-menu').removeClass('is-open')
+
+	});
+
 });
 
 

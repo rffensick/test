@@ -1,6 +1,5 @@
-mixin header()
-	-var active = ''; 
-	-var menu = { 'Личная информация': '/home', 'Опыт': '/exp', 'Javascript': '/java', 'О себе': '/about' };
+mixin header() 
+	- var menu = [ 'Личная информация', 'Опыт', 'Javascript', 'О себе' ];
 	header.header
 		.wrapper
 			.nav-mobile-menu
@@ -8,9 +7,6 @@ mixin header()
 			.main-menu
 				nav
 					ul
-						each val, key in menu
+						each key in menu
 							li
-								if active === key
-									a.active(href=val, title=key)= key
-								else
-									a(href=val, title=key)= key
+								a= key
